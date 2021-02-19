@@ -1,0 +1,153 @@
+.myresume-Section {
+  h1 {
+    font-size: 3.3rem;
+    text-align: center;
+    margin: 10px 0 0;
+    color: rgba(0, 49, 52, 0.9);
+    font-weight: 500;
+  }
+  .time-Line {
+    position: relative;
+    margin: 50px auto;
+    padding: 0;
+    width: 90%;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background: #c5c5c5;
+    }
+    .timeLine-main {
+      .timeLine-item {
+        list-style: none;
+        line-height: normal;
+        position: relative;
+        width: 50%;
+        padding: 20px 45px 35px 30px;
+        &:nth-child(odd) {
+          float: left;
+          text-align: left;
+          clear: both;
+          h3 {
+            text-align: right;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 24px;
+            right: 14px;
+            width: 10px;
+            height: 10px;
+            background: rgb(233, 73, 33);
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px rgba(245, 140, 108, 0.2);
+          }
+        }
+        &:nth-child(even) {
+          float: right;
+          text-align: left;
+          clear: both;
+          padding: 20px 10px;
+          h3 {
+            text-align: left;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 24px;
+            left: -23.3px;
+            width: 10px;
+            height: 10px;
+            background: rgb(233, 73, 33);
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px rgba(245, 140, 108, 0.2);
+          }
+        }
+        .resumeContent {
+          padding: 20px;
+          border: 3px dashed #003134;
+          border-radius: 10px;
+          transition: all 0.3s ease-in-out;
+          .time {
+            padding-top: 10px;
+            h4 {
+              color: #9c9a9a;
+              font-size: 12px;
+              text-align: right;
+            }
+          }
+          h3 {
+            margin: 0;
+            padding: 0;
+            font-weight: 600;
+            color: rgb(233, 73, 33);
+            // text-align: right;
+          }
+          .resume-item {
+            list-style-type: circle;
+            padding: 10px;
+            li {
+              text-align: left;
+              padding: 5px 0;
+            }
+          }
+          &:hover {
+            transform: scale(1.03);
+            background: linear-gradient(
+              to right,
+              rgba(251, 189, 97, 0.8),
+              rgba(236, 117, 50, 0.8)
+            );
+            color: #1b1b1b;
+            border: 2px solid #003134;
+            position: relative;
+            box-shadow: 10px 10px 10px 5px rgba(26, 25, 25, 0.5);
+          }
+          &:hover h3 {
+            color: rgb(12, 41, 104);
+          }
+          &:hover .time h4 {
+            color: #003134;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .myresume-Section {
+    .time-Line {
+      width: 100%;
+      &::before {
+        left: 20px;
+      }
+    }
+  }
+  .myresume-Section {
+    .time-Line {
+      .timeLine-main {
+        .timeLine-item {
+          &:nth-child(odd),
+          &:nth-child(even) {
+            padding: 0 0;
+            h3 {
+              text-align: left;
+            }
+            width: 100%;
+            float: left;
+            text-align: left;
+            padding-left: 20px;
+            padding-bottom: 40px;
+            &::before {
+              content: "";
+              left: -23.3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

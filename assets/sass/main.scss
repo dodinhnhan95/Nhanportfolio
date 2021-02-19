@@ -1,0 +1,23 @@
+// Vendor
+// chỉ import file có đuôi scss
+// heplper
+@import "./Helper/variables";
+@import "./Helper/mixin";
+
+// Base
+@import "./base/reset";
+
+// component
+
+// layouts
+@import "./Layout/SkillsSection";
+@import "./Layout/AboutSection";
+@import "./Layout/header";
+@import "./Layout/bannerSection";
+@import "./Layout/Resume";
+@import "./Layout/Portfolio";
+@import "./Layout/ContactSection";
+@import "./Layout/Footer";
+//Page
+
+// Theme

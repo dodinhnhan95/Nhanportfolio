@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+.containerFluid {
+  width: 100%;
+}
+.Container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  z-index: 101;
+  width: 100%;
+  .Container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icon {
+    font-size: 2.5rem;
+    color: white;
+    width: 75px;
+    height: 75px;
+    float: right;
+    display: none;
+    cursor: pointer;
+    i {
+      padding-top: 20px;
+    }
+  }
+  .nameNhan {
+    padding-top: 20px;
+    @include styleText($color-red-0, $fs-3, $fw-bold-1);
+    height: 75px;
+    width: 250px;
+  }
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    li {
+      a {
+        letter-spacing: 0.2px;
+        display: inline-block;
+        height: 40px;
+        line-height: 65px;
+        color: #fff;
+        text-decoration: none;
+        @include styleText($color-gray-5, 0, $fw-bold-0);
+        font-size: 17px;
+        padding: 0 10px;
+        transition: all 0.5s;
+
+        &:hover {
+          @include styleText($color-red-0, 0, $fw-bold-0);
+          font-size: 17px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .Container nav ul li a {
+    padding: 0 6px;
+  }
+  // .Container .navBox {
+  //   width: 100%;
+  // }
+}
+@media only screen and (max-width: 768px) {
+  // bỏ display: none đi mới lướt được
+  // .Container .navBox {
+  //   width: 100%;
+  // }
+  .Container {
+    justify-items: center;
+    nav {
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      // width: 100%;
+      background-color: rgba(61, 60, 60, 0.9);
+      width: 60%;
+      height: 300px;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+      margin: 0 auto;
+      padding-left: 0;
+      justify-items: center;
+      ul {
+        position: relative;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        li {
+          // width: 90%;
+          margin: 0 auto;
+          a {
+            padding: 0 0;
+          }
+        }
+
+        display: block;
+        text-align: center;
+      }
+    }
+
+    .icon {
+      display: block;
+      cursor: pointer;
+    }
+    .active {
+      left: 20%;
+      display: block;
+      position: fixed;
+      z-index: 101;
+    }
+  }
+}
+.activePosition {
+  color: red;
+}
