@@ -17,7 +17,6 @@ html {
 #skills {
   background-image: url(../img/windMachine.jpg);
   background-size: cover;
-  background-attachment: fixed;
 }
 
 #skills .Container {
@@ -516,7 +515,6 @@ section {
 
 .bannerSection {
   background-image: url(../img/grassfield.jpg);
-  background-attachment: fixed;
   background-size: cover;
   position: relative;
 }
