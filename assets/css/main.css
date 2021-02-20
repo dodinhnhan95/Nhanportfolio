@@ -377,12 +377,40 @@ header .icon i {
 }
 
 header .nameNhan {
+  display: flex;
+  font-family: "Press Start 2P", cursive;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
   padding-top: 20px;
-  color: #ec5252;
-  font-size: 24px;
+  color: #e65613;
   font-weight: 700;
   height: 75px;
   width: 250px;
+}
+
+header .nameNhan span {
+  display: table-cell;
+  margin: 1px;
+  padding: 0;
+  animation: animate 2s linear infinite;
+}
+
+header .nameNhan span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+header .nameNhan span:nth-child(2) {
+  animation-delay: 0.35s;
+}
+
+header .nameNhan span:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+header .nameNhan span:nth-child(4) {
+  animation-delay: 1.05s;
 }
 
 header nav ul {
@@ -465,6 +493,20 @@ header nav ul li a:hover {
 
 .activePosition {
   color: red;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    color: #832402;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #ff7b00, 0 0 20px #ff7b00, 0 0 40px #ff7b00, 0 0 80px #ff7b00, 0 0 120px #ff7b00, 0 0 200px #ff7b00, 0 0 300px #ff7b00, 0 0 400px #ff7b00;
+  }
+  5%,
+  95% {
+    color: #fc7c55;
+    filter: blur(0px);
+  }
 }
 
 section {
