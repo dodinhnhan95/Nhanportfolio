@@ -21,6 +21,8 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+    <!-- wow animated -->
+    <link rel="stylesheet" href="./css/animated.css">
     <!-- Swiper Slider -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -92,11 +94,11 @@
 
 
  <!-- Section About -->
- <section id="about" class="containerFluid"> 
+ <section id="about" class="containerFluid wow slideInRight" data-wow-offset="1"  data-wow-iteration="1"> 
  <div class="Container">
      <h2 class="title">About Me</h2>
      <div class="grid">
-         <div class="aboutImage">
+         <div class="aboutImage wow slideInLeft" data-wow-duration="0.5s" data-wow-delay="0.1s">
              <img src='./img/IMG_2381.jpg' alt="about Image">
          </div>
          <div class="aboutsContent">
@@ -136,7 +138,7 @@
 </section>
 <!-- Section About end -->
 <!-- Section Resumme -->
-<section class="myresume-Section" id="resume">
+<section class="myresume-Section wow slideInLeft" data-wow-duration="1s" data-wow-delay="0s" id="resume">
   <div class="resume_container">
     <h1>My ReSume</h1>
     <div class="time-Line">
@@ -359,9 +361,9 @@
 <!-- Section portfolio -->
 <section id="portfolio" class="containerFluid" >
   <div class="container">
-    <h1>My Portfolio</h1>
-    <div class="portfolio_container">
-      <div class="swiper-container">
+    <h1 class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="0s">My Portfolio</h1>
+    <div class="portfolio_container" >
+      <div class="swiper-container wow slideInRight" data-wow-offset="1"  data-wow-iteration="1">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="slide_project slide_img1">
@@ -443,7 +445,7 @@
 <!-- End section Portfolio -->
 
 <!-- Section Contact -->
- <Section id="Contact" class="containerFluid">
+ <Section id="Contact" class="containerFluid wow bounceInUp" >
   <div  class="container">
     <h1 class="title">Contact Me</h1>
     <h5>Thank you to spend your time visiting my page! Hope that we can have a chance to work together.</h5>
@@ -517,6 +519,20 @@
 <footer > 
   Copyright © 2020 All rights reserved | By DINH NHAN
 </footer>
+<!-- wow animate js -->
+<script src="./wow.js"></script>
+<script>
+   wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+   )
+   wow.init()
+</script>
 
 <!-- Swpiper Slider js -->
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
