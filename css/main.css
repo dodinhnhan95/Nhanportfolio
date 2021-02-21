@@ -349,10 +349,20 @@ html {
   margin: 0 auto;
 }
 
+.sticky {
+  position: fixed;
+  z-index: 1000;
+  background: #212529;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
 header {
   background-color: rgba(0, 0, 0, 0.9);
-  position: fixed;
-  z-index: 101;
+  background: transparent;
+  transition: 0.2s all ease-in-out;
+  position: absolute;
+  z-index: 999;
   width: 100%;
 }
 
