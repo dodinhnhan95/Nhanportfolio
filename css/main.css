@@ -277,11 +277,28 @@ html {
   margin-top: 50px;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  padding-bottom: 40px;
 }
 
 .Container .grid .aboutsContent .infoGrid label {
   font-weight: 700;
   color: #444;
+}
+
+.Container .grid .aboutsContent button {
+  box-shadow: 0px 0px 5px 0px black;
+  margin: 0 auto;
+  border: none;
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+  transition: all 0.5s;
+}
+
+.Container .grid .aboutsContent button a {
+  color: white;
+}
+
+.Container .grid .aboutsContent button:hover {
+  background: linear-gradient(to right, rgba(251, 189, 97, 0.8), rgba(236, 117, 50, 0.7));
 }
 
 .Container .grid .aboutImage {
@@ -318,6 +335,11 @@ html {
   border-radius: 7px;
   width: 293px;
   height: 450px;
+}
+
+.down-cv {
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 
 @media only screen and (max-width: 768px) {
